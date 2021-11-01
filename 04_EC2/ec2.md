@@ -150,6 +150,9 @@ $ node main.js
 4. The private EC2 is access to the Internet now
 5. Remove the NAT gateway & Elastic IP address once completed
 
+### View all the IP address
++ *EC2 -> Network & Security -> Network Interfaces*
+
 ## Basic Linux Commands
 
 + Switch to root user: sudo -s

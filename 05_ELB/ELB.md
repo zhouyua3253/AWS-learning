@@ -56,11 +56,11 @@ Load balancer has IP address and domain.
     + Protocol: HTTP 80
     + Forward to: elb-ec2-target-group
 
-### Load Balancer has own DNS
+### Load Balancer has own IP/DNS
 
 > elb-ec2-load-balancer-1847686605.ap-southeast-1.elb.amazonaws.com
 
 So the EC2 instances don't need to have public IP address to provide web service.<br>
-Users -> ELB(public DNS) -> EC2s (private IP)
+Users -> ELB(public IP) -> EC2s (private IP)
 
 
