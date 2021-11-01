@@ -45,6 +45,7 @@ Load balancer has IP address and domain.
     + Click: Include as pending below
 
 ### EC2 -> Load Balancing -> Load Balancers -> Create Load Balancer
+
 + Load balancer types: Application Load Balancer (HTTP, HTTPS)
 + Load balancer name: elb-ec2-load-balancer
 + Scheme: Internet-facing
@@ -52,10 +53,14 @@ Load balancer has IP address and domain.
 + Mappings: Select at least two Availability Zones and one subnet per zone
 + Security group: public-web-sg
 + Listeners and routing:
-   + Protocol: HTTP 80
-   + Forward to: elb-ec2-target-group
-   
+    + Protocol: HTTP 80
+    + Forward to: elb-ec2-target-group
+
 ### Load Balancer has own DNS
+
 > elb-ec2-load-balancer-1847686605.ap-southeast-1.elb.amazonaws.com
+
+So the EC2 instances don't need to have public IP address to provide web service.<br>
+Users -> ELB(public DNS) -> EC2s (private IP)
 
 
