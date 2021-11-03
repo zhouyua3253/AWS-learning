@@ -50,7 +50,7 @@
 + Outbound rules: Allow all traffic, all port
 + Optional: set whitelist, blacklist on the Inbound/Outbound rules
 
-### Security Groups, works on the instance/resource level, ec2, s3...
+### Security Groups, works on the instance/resource level, ec2, elb, s3...
 
 1. Create public security group:
     + Name: public-sg

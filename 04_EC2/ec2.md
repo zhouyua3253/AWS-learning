@@ -110,6 +110,10 @@ $ node main.js
 1. Stop running ec2 instance
 2. Actions -> Image and templates -> Create image
 
+### Copy AMI to other regions
+
++ EC2 -> AMI2 -> Select a AMI -> Actions -> Copy AMI
+
 ### SSH to the private EC2 via the public EC2
 
 + Private EC2 IP: 172.16.20.100, in subnet-private
@@ -151,6 +155,7 @@ $ node main.js
 5. Remove the NAT gateway & Elastic IP address once completed
 
 ### View all the IP address
+
 + *EC2 -> Network & Security -> Network Interfaces*
 
 ## Basic Linux Commands
@@ -228,6 +233,7 @@ nohub sudo "$(which node)" web-app.js > running.out &
 ```
 
 + Stop the background running process
+
 ```bash
 [ec2-user@ip-172-16-10-100 ~]$ ps aux|grep node
 root      5335  0.0  0.7 241796  7168 ?        S    03:36   0:00 sudo /home/ec2-user/.nvm/versions/node/v17.0.1/bin/node web.js
