@@ -154,6 +154,13 @@ $ node main.js
 4. The private EC2 is access to the Internet now
 5. Remove the NAT gateway & Elastic IP address once completed
 
+### Elastic IP addresses
+1. Allocate Elastic IP address:
+2. Associate Elastic IP address
+   + Resource type: Instance
+   + Instance: ec2-public-1
+3. If Elastic IP associated to a stopped EC2, will be charged
+
 ### View all the IP address
 
 + *EC2 -> Network & Security -> Network Interfaces*

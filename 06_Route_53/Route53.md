@@ -1,4 +1,5 @@
 ## Route 53
+Global level, no need to specify region
 
 ### Register domain
 
@@ -37,6 +38,9 @@
     - Routing policy: **Simple routing**
 
 ### Weighted routing policy: Route traffic to multiple resources in proportions that you specify
+
+Support cross regions.<br>
+Kind of Load Balancer on the domain level. If a resource is unhealthy, route traffic to others.
 
 + Pre-requirements: Multi domains/IPs
     1. http://sto.yumin.site

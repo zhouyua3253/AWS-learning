@@ -53,8 +53,16 @@ Load balancer has IP address and domain.
 + Mappings: Select at least two Availability Zones and one subnet per zone
 + Security group: public-web-sg
 + Listeners and routing:
-    + Protocol: HTTP 80
-    + Forward to: elb-ec2-target-group
+    1. Protocol: HTTP 80<br>Forward to: elb-ec2-target-group
+    2. Protocol: HTTPs 443<br>Forward to: elb-ec2-target-group
+
+### ELB more route actions: ELB -> Listeners -> Edit
+
++ Default action:
+    1. Forward to target group
+    2. Redirect: could be customized #{protocol}://#{host}:#{port}/#{path}?#{query}<br>
+       E.g. http 80 redirect to https 443, with Original host, path, query
+    3. Return fixed response
 
 ### Load Balancer has own IP/DNS
 
