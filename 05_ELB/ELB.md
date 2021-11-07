@@ -64,7 +64,13 @@ Load balancer has IP address and domain.
        E.g. http 80 redirect to https 443, with Original host, path, query
     3. Return fixed response
 
-### Load Balancer has own IP/DNS
+### Route HTTP to HTTPS in ELB
+
+Two Listeners:
+1. HTTPS: forwarding to elb-ec2-target-group 
+2. HTTP: redirecting to HTTPS://#{host}:443/#{path}?#{query}
+
+#### Load Balancer has own IP/DNS
 
 > elb-ec2-load-balancer-1847686605.ap-southeast-1.elb.amazonaws.com
 

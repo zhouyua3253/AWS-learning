@@ -16,8 +16,6 @@
     + Select an existing security group: public-sg
 7. SSH key pair: ec2-keypair.pem
 
----
-
 ### Launch Amazon Linux 2 instance, private network
 
 1. Choose Amazon Linux 2 AMI
@@ -33,6 +31,24 @@
 6. Configure Security Group
     + Select an existing security group: private-sg
 7. SSH key pair: ec2-keypair.pem
+
+---
+
+### Connect to EC2 instance via AWS systems manager
+1. Create SSM(Simple systems manager) IAM role
+   + Go to IAM -> Roles panel
+   + Create a role -> EC2 -> Next: Permission (buttonn)
+   + Attach permissions policies : AmazonEC2RoleforSSM
+   + Tags: Name: ec2-ssm-role
+2. Grant EC2 instance SSM IAM role
+   + Go to EC2 -> Instances -> select a EC2 instannce
+   + Actions -> Security -> Modify IAM role
+   + IAM role: ec2-ssm-role 
+3. Connect EC2 instance via Session Manager
+   + Go to AWS Systems Manager -> Session Manager 
+   + Start session: 
+      - Choose a running EC2
+      - Start session
 
 ### Install docker
 

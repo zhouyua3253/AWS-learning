@@ -13,7 +13,9 @@ Not Global level, must specify region
 ### Request certificate
 
 + Fully qualified domain name: *.yumin.site (support Wildcard Names)
-+ Add *CNAME* name/value to DNS configuration<br>Create records in Route 53 for certificate
++ Select validation method: DNS validation, recommended
+    - Add *CNAME* name/value to DNS configuration manually
+    - *Create records* in Route 53 for certificate by clicking the button
 
 ### Listen HTTPS 443 port in Load Balancer/CloudFront/Beanstalk...
 
