@@ -10,7 +10,7 @@ Go to CloudFront -> Policies -> Create cache policy
 2. TTL settings: No need to modify
 3. ***Cache key settings***: Choose which headers to include in the cache key.
     + Headers: Include the following headers
-        - **Host** (Keep the original host, instead of showing the real Cloudfront domain name)
+        - **Host** (Pass the hostname to EC2 instances, instead of xxx.elb.amazonaws.com)
     + Query strings: Specify the query for the HTTP request, optional<br>E.g. ?name=xxx&age=yy&index=z
         - name
         - age
