@@ -49,6 +49,8 @@
    + Start session: 
       - Choose a running EC2
       - Start session
+4. su to ec2 user, the default login user is root user
+   - sudo su ec2-user
 
 ### Install docker
 

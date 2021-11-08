@@ -54,20 +54,22 @@ Load balancer has IP address and domain.
 + Security group: public-web-sg
 + Listeners and routing:
     1. Protocol: HTTP 80<br>Forward to: elb-ec2-target-group
-    2. Protocol: HTTPs 443<br>Forward to: elb-ec2-target-group
+    2. Protocol: HTTPS 443<br>Forward to: elb-ec2-target-group
 
 ### ELB more route actions: ELB -> Listeners -> Edit
 
 + Default action:
-    1. Forward to target group
+    1. Forward to target group (mainly usage)
     2. Redirect: could be customized #{protocol}://#{host}:#{port}/#{path}?#{query}<br>
-       E.g. http 80 redirect to https 443, with Original host, path, query
+       E.g. http 80 redirect to https 443, with Original host, path, query. Notice: A SSL certificate of custom domain
+       must be assigned to ELB:443
     3. Return fixed response
 
 ### Route HTTP to HTTPS in ELB
 
 Two Listeners:
-1. HTTPS: forwarding to elb-ec2-target-group 
+
+1. HTTPS: forwarding to elb-ec2-target-group
 2. HTTP: redirecting to HTTPS://#{host}:443/#{path}?#{query}
 
 #### Load Balancer has own IP/DNS
