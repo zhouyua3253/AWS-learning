@@ -1,4 +1,5 @@
 ## CloudFront: CDN
+Only in *N.Virginia region*
 
 ### Create CloudFront -> Policies
 

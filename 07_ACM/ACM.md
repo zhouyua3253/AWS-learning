@@ -10,7 +10,7 @@ Not Global level, must specify region
 + API Gateway
 + ...
 
-### Request certificate
+### Request certificate: Only in *N.Virginia region* can be used for Cloudfront
 
 + Fully qualified domain name: *.yumin.site (support Wildcard Names)
 + Select validation method: DNS validation, recommended
